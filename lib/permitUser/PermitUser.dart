@@ -31,7 +31,8 @@ class LoginScreen extends StatelessWidget {
           //This callback would gets called when verification is done auto maticlly
         },
         verificationFailed: (AuthException exception){
-          print(exception);
+          print("Error is here");
+          print(exception.message);
         },
         codeSent: (String verificationId, [int forceResendingToken]){
           showDialog(
@@ -123,7 +124,7 @@ class LoginScreen extends StatelessWidget {
                       padding: EdgeInsets.all(16),
                       onPressed: () {
                         final phone = _phoneController.text.trim();
-                         if(phone == "+918527586157"){
+                         if(phone == "+917406362000"){
                            loginUser(phone, context);
                          }else{
  Alert(

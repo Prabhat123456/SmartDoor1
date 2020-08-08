@@ -1,3 +1,4 @@
+import 'package:SmartBell/Details/Details.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +19,17 @@ class HomeScreen extends StatelessWidget {
           children: <Widget>[
             Text("You are Logged in succesfully", style: TextStyle(color: Colors.lightBlue, fontSize: 32),),
             SizedBox(height: 16,),
-            Text("${user.phoneNumber}", style: TextStyle(color: Colors.grey, ),),
+            FlatButton(
+  onPressed: () {
+    Navigator.push(context, MaterialPageRoute(
+                            builder: (context) => Details()
+                        ));
+   
+  },
+  child: Text(
+    "Click here to enter your details",
+  ),
+)
           ],
         ),
       ),
