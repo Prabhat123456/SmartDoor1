@@ -10,6 +10,16 @@
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+<string>Need BLE permission</string>
+<key>NSBluetoothPeripheralUsageDescription</key>
+<string>Need BLE permission</string>
+<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+<string>Need Location permission</string>
+<key>NSLocationAlwaysUsageDescription</key>
+<string>Need Location permission</string>
+<key>NSLocationWhenInUseUsageDescription</key>
+<string>Need Location permission</string>
 	<key>CFBundleName</key>
 	<string>SmartBell</string>
 	<key>CFBundlePackageType</key>

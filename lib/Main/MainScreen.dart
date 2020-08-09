@@ -1,4 +1,5 @@
 
+import 'package:SmartBell/Main/Bluetooth.dart';
 import 'package:flutter/material.dart';
 import 'Lock.dart';
 import 'Insight.dart';
@@ -13,14 +14,16 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: DefaultTabController(
-        length: 3,
+        length: 4,
         child: Scaffold(
           appBar: AppBar(
             bottom: TabBar(
               tabs: [
+                Tab(icon: Icon(Icons.home)),
                 Tab(icon: Icon(Icons.lock)),
                 Tab(icon: Icon(Icons.pie_chart)),
                 Tab(icon: Icon(Icons.more)),
+
               ],
             ),
             title: Text('Welcome'),
@@ -28,6 +31,7 @@ class MainScreen extends StatelessWidget {
           body: TabBarView(
             children: [
               Lock(),
+              FlutterBlueApp(),
               Insight(),
               MoreView()
             ],
@@ -37,3 +41,5 @@ class MainScreen extends StatelessWidget {
     );
   }
 }
+
+

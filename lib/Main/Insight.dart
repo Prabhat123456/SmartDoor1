@@ -45,7 +45,8 @@ Widget _buildList(List<String> nameList){
   }
 
   return  Expanded(
-          child: SizedBox(child:ListView.builder(
+          child: SizedBox(
+            child: ListView.builder(
   padding: const EdgeInsets.all(8),
   itemCount: entries.length,
   itemBuilder: (BuildContext context, int index) {
@@ -55,7 +56,9 @@ Widget _buildList(List<String> nameList){
         ),
       );
   }
-)));
+)
+)
+);
   }
 
 }
