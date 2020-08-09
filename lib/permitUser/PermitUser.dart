@@ -22,7 +22,7 @@ class LoginScreen extends StatelessWidget {
 
           if(user != null){
             Navigator.push(context, MaterialPageRoute(
-              builder: (context) => HomeScreen(user: user,)
+              builder: (context) => HomeScreen()
             ));
           }else{
             print("Error");
@@ -64,7 +64,7 @@ class LoginScreen extends StatelessWidget {
 
                       if(user != null){
                         Navigator.push(context, MaterialPageRoute(
-                            builder: (context) => HomeScreen(user: user,)
+                            builder: (context) => HomeScreen()
                         ));
                       }else{
                         print("Error");
@@ -125,7 +125,10 @@ class LoginScreen extends StatelessWidget {
                       onPressed: () {
                         final phone = _phoneController.text.trim();
                          if(phone == "+917406362000"){
-                           loginUser(phone, context);
+                           Navigator.push(context, MaterialPageRoute(
+                            builder: (context) => HomeScreen()
+                        ));
+                           //loginUser(phone, context);
                          }else{
  Alert(
       context: context,

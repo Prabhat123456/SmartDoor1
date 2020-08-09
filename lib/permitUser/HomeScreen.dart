@@ -9,9 +9,6 @@ BluetoothDeviceState deviceState;
 
 class HomeScreen extends StatelessWidget {
 
-  final FirebaseUser user;
-
-  HomeScreen({this.user});
 
   @override
   Widget build(BuildContext context) {
