@@ -2,6 +2,7 @@ import 'package:SmartBell/Main/MainScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:intl/intl.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
 
 class Details extends StatelessWidget {
    List<String> nameList = List<String>();
@@ -79,7 +80,8 @@ class Details extends StatelessWidget {
    var phone = _phoneController.text;
    DateTime now = DateTime.now();
    String formattedDate = DateFormat('yyyy-MM-dd – kk:mm').format(now);
-  
+   if (name.length > 0 && email.length > 0 && phone.length > 0){
+   
   nameList = await getNameList();
  if (nameList == null){
    nameList = List<String>();
@@ -94,6 +96,24 @@ class Details extends StatelessWidget {
     Navigator.push(context, MaterialPageRoute(
                             builder: (context) => MainScreen()
                         ));
+   } else {
+     Alert(
+      context: context,
+      type: AlertType.error,
+      title: "Value Missing",
+      desc: "Kindly fill all the details to proceed further.",
+      buttons: [
+        DialogButton(
+          child: Text(
+            "Ok",
+            style: TextStyle(color: Colors.white, fontSize: 20),
+          ),
+          onPressed: () => Navigator.pop(context),
+          width: 120,
+        )
+      ],
+    ).show();
+   }
    
   },
   child: Text(
