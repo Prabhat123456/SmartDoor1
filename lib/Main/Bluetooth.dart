@@ -229,7 +229,7 @@ class DeviceScreen extends StatelessWidget {
                   break;
                 case BluetoothDeviceState.disconnected:
                   onPressed = () => device.connect();
-                  text = 'CONNECT';
+                  text = 'DISCONNECT';
                   break;
                 default:
                   onPressed = null;
@@ -265,7 +265,7 @@ class DeviceScreen extends StatelessWidget {
                     ? Icon(Icons.bluetooth_connected)
                     : Icon(Icons.bluetooth_disabled),
                 title: Text(
-                    'Device is ${snapshot.data.toString().split('.')[1]}.'),
+                    'Device is connected'),
                 subtitle: Text('${device.id}'),
                 trailing: StreamBuilder<bool>(
                   stream: device.isDiscoveringServices,
