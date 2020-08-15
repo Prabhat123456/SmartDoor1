@@ -74,7 +74,7 @@ class FindDevicesScreen extends StatelessWidget {
       ),
       body: RefreshIndicator(
         onRefresh: () =>
-            FlutterBlue.instance.startScan(timeout: Duration(seconds: 4)),
+            FlutterBlue.instance.startScan(timeout: Duration(seconds: 60)),
         child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
@@ -85,7 +85,7 @@ class FindDevicesScreen extends StatelessWidget {
               Image.asset('assets/intro/lock.png'))),
               
               StreamBuilder<List<BluetoothDevice>>(
-                stream: Stream.periodic(Duration(seconds: 2))
+                stream: Stream.periodic(Duration(seconds:10))
                     .asyncMap((_) => FlutterBlue.instance.connectedDevices),
                 initialData: [],
                 builder: (c, snapshot) => Column(
@@ -152,7 +152,7 @@ class FindDevicesScreen extends StatelessWidget {
             return FloatingActionButton(
                 child: Icon(Icons.search),
                 onPressed: () => FlutterBlue.instance
-                    .startScan(timeout: Duration(seconds: 4)));
+                    .startScan(timeout: Duration(seconds:60)));
           }
         },
       ),

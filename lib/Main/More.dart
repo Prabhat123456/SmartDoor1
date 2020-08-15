@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:settings_ui/settings_ui.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:share/share.dart';
-import 'package:store_redirect/store_redirect.dart'; 
+
 
 class MoreView extends StatefulWidget {
   MoreView();
@@ -55,6 +55,31 @@ class MoreViewState extends State<MoreView> {
               // ),
             ],
           ),
+           SettingsSection(
+            title: 'About our college',
+            tiles: [
+              SettingsTile(
+                title: 'R.K.G.I.T',
+                subtitle: '',
+                leading: Icon(Icons.school),
+                onTap: () {
+            _launchURL("https://rkgit.edu.in/");
+            
+                },
+              ),
+
+              SettingsTile(
+                title: 'Contact',
+                subtitle: '',
+                leading: Icon(Icons.contact_phone),
+                onTap: () {
+            _launchURL("https://rkgit.edu.in/contactus/");
+            
+                },
+              ),
+            ],
+     ),   
+
           SettingsSection(
             title: 'Show your love to us',
             tiles: [
