@@ -89,10 +89,7 @@ class Lock extends StatelessWidget {
                   style: TextStyle(fontWeight: FontWeight.normal,color:Colors.white,fontSize:16)),
                   SizedBox(height:10),
                   Text('(3) User can scan for the bluetooth device with the help of mobile app.',
-                  style: TextStyle(fontWeight: FontWeight.normal,color:Colors.white,fontSize:16)),
-                  SizedBox(height:10),
-                  Text('(4) He can then connect to the bluetooth device and unlock the door',
-                  style: TextStyle(fontWeight: FontWeight.normal,color:Colors.white,fontSize:16)),
+                  style: TextStyle(fontWeight: FontWeight.normal,color:Colors.white,fontSize:16))   
             ],
           ),
         ),

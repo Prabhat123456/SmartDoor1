@@ -22,7 +22,7 @@ class HomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text("You are Logged in succesfully", style: TextStyle(color: Colors.lightBlue, fontSize: 32),),
+            Text("You are Logged in Successfully", style: TextStyle(color: Colors.lightBlue, fontSize: 32),),
             SizedBox(height: 16,),
             FlatButton(
   onPressed: () {

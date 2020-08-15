@@ -38,7 +38,7 @@ class MoreViewState extends State<MoreView> {
                 },
               ),
               SettingsTile(
-                title: 'Rishabh',
+                title: 'Rishabh Kumar',
                 subtitle: '',
                 leading: Icon(Icons.people),
                 onTap: () {
